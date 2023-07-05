@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 
-int findGCD(int a, int b) { // Знаходимо найбільший спільний дільник
+int findGCD(int a, int b) { // Р—РЅР°С…РѕРґРёРјРѕ РЅР°Р№Р±С–Р»СЊС€РёР№ СЃРїС–Р»СЊРЅРёР№ РґС–Р»СЊРЅРёРє
     if (b == 0)
         return a;
     return findGCD(b, a % b);
 }
 
-int findLCM(int arr[], int n) { // Знаходимо найменше спільне кратне
+int findLCM(int arr[], int n) { // Р—РЅР°С…РѕРґРёРјРѕ РЅР°Р№РјРµРЅС€Рµ СЃРїС–Р»СЊРЅРµ РєСЂР°С‚РЅРµ
     int lcm = arr[0];
 
     for (int i = 1; i < n; i++) {
@@ -22,18 +22,18 @@ int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     int n;
-    printf("Введіть кількість чисел: ");
+    printf("Р’РІРµРґС–С‚СЊ РєС–Р»СЊРєС–СЃС‚СЊ С‡РёСЃРµР»: ");
     scanf("%d", &n);
 
     int numbers[n];
-    printf("Введіть %d натуральних чисел, розділені пробілом: ", n);
+    printf("Р’РІРµРґС–С‚СЊ %d РЅР°С‚СѓСЂР°Р»СЊРЅРёС… С‡РёСЃРµР», СЂРѕР·РґС–Р»РµРЅС– РїСЂРѕР±С–Р»РѕРј: ", n);
     for (int i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
 
     int lcm = findLCM(numbers, n);
 
-    printf("Найменше спільне кратне: %d\n", lcm);
+    printf("РќР°Р№РјРµРЅС€Рµ СЃРїС–Р»СЊРЅРµ РєСЂР°С‚РЅРµ: %d\n", lcm);
 
     return 0;
 }
