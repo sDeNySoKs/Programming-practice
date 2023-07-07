@@ -1,22 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 
-int factorial(int n) {// Функція для обчислення факторіалу числа
+int factorial(int n) {// Р¤СѓРЅРєС†С–СЏ РґР»СЏ РѕР±С‡РёСЃР»РµРЅРЅСЏ С„Р°РєС‚РѕСЂС–Р°Р»Сѓ С‡РёСЃР»Р°
     if (n <= 1)
         return 1;
     else
         return n * factorial(n - 1);
 }
 
-int countAnagrams(char word[]) {// Функція для обчислення кількості анаграм
+int countAnagrams(char word[]) {// Р¤СѓРЅРєС†С–СЏ РґР»СЏ РѕР±С‡РёСЃР»РµРЅРЅСЏ РєС–Р»СЊРєРѕСЃС‚С– Р°РЅР°РіСЂР°Рј
     int length = strlen(word);
-    int count[26] = {0}; // Масив для підрахунку кількості кожної букви
+    int count[26] = {0}; // РњР°СЃРёРІ РґР»СЏ РїС–РґСЂР°С…СѓРЅРєСѓ РєС–Р»СЊРєРѕСЃС‚С– РєРѕР¶РЅРѕС— Р±СѓРєРІРё
 
     for (int i = 0; i < length; i++) {
         count[word[i] - 'A']++;
     }
 
-    int denominator = 1;// Обчислюємо кількість анаграм за формулою
+    int denominator = 1;// РћР±С‡РёСЃР»СЋС”РјРѕ РєС–Р»СЊРєС–СЃС‚СЊ Р°РЅР°РіСЂР°Рј Р·Р° С„РѕСЂРјСѓР»РѕСЋ
     for (int i = 0; i < 26; i++) {
         if (count[i] > 1) {
             denominator *= factorial(count[i]);
@@ -28,16 +28,16 @@ int countAnagrams(char word[]) {// Функція для обчислення кількості анаграм
 }
 
 int main() {
-    РРРрррHhSetConsoleCP(1251);
+    Р Р Р СЂСЂСЂHhSetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     char word[15];
 
-    printf("Введіть слово: ");
+    printf("Р’РІРµРґС–С‚СЊ СЃР»РѕРІРѕ: ");
     scanf("%s", word);
 
     int anagramCount = countAnagrams(word);
 
-    printf("Кількість анаграм: %d\n", anagramCount);
+    printf("РљС–Р»СЊРєС–СЃС‚СЊ Р°РЅР°РіСЂР°Рј: %d\n", anagramCount);
 
     return 0;
 }
