@@ -28,7 +28,7 @@ int countAnagrams(char word[]) {// Функція для обчислення к
 }
 
 int main() {
-    РРРрррHhSetConsoleCP(1251);
+    SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     char word[15];
 
