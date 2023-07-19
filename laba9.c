@@ -26,6 +26,8 @@ int minSteps(int x, int y) {
 }
 
 int main() {
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
     int x, y;
     printf("Введіть значення x: ");
     scanf("%d", &x);
